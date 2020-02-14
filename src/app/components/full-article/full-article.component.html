@@ -1,0 +1,18 @@
+<a routerLink="/home"><button class="btn-success">Revenir à la l'accueil</button></a>
+<div *ngIf="article" class="text-center">
+    <h1>Article n°{{ article.id }} <br> {{article.titre}}</h1>
+
+
+    <div class="text-center">
+        <div>
+            <img src="{{ article.image }}">
+        </div>
+        <div class="text-center">
+            {{ article.contenu }}
+        </div>
+        <input (click)="vote()" class="btn btn-danger" value="Voter pour cet article">
+    </div>
+</div>
+<div *ngIf="!article" class="alert-danger text-center p-3 m-2">
+    Cet article n'existe pas
+</div>

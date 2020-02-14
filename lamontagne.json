@@ -1,0 +1,52 @@
+{
+  "article": [
+    {
+      "titre": "Marseille a perdu !",
+      "contenu": "Ils ont ete nul!",
+      "image": "assets/images/asm.jpg",
+      "id": 1
+    },
+    {
+      "titre": "Augustin m'aide pour postman!",
+      "contenu": "Il est patient!! Mais ce matin il a fait tombé mon café!!!",
+      "image": "assets/images/asm.jpg",
+      "id": 3
+    },
+    {
+      "titre": "Vendredi!!!!",
+      "contenu": "Je kiff le vendredi!!!!",
+      "image": "https://lh3.googleusercontent.com/proxy/nLRxT53LG73ZmkYZlrAkxqh8dS5a_SEE0uL5uHw0l45svyRE6g-5vFWuq-OdBdFwv_wHS6N3E1XVl09de47c9iIaNWkuIhjoeTViZMI",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "titre": "wdgss",
+      "contenu": "dwsgg",
+      "image": "dgwdg"
+    },
+    {
+      "id": 6,
+      "titre": "fhxgh",
+      "contenu": "gnhxfgn",
+      "image": "gjncghj"
+    },
+    {
+      "id": 7,
+      "titre": "manon",
+      "contenu": "cayrolles",
+      "image": "dghdf"
+    },
+    {
+      "id": 8,
+      "titre": "La saint Valentin",
+      "contenu": "Fete commerciale pour faire depenser du fric aux amoureux!!!",
+      "image": "gfuhgfjdjggdjdghjchjcgh"
+    },
+    {
+      "id": 9,
+      "titre": "CAYROLLES",
+      "contenu": "MANON",
+      "image": "https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-260nw-721703848.jpg"
+    }
+  ]
+}

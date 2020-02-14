@@ -1,0 +1,11 @@
+img{
+    max-width: 150px;
+  }
+.myArticles{
+  border: 3px solid black;
+  background-color: grey;
+}  
+.btn-danger{
+  max-width: 200px;
+  max-height:50px ;
+}

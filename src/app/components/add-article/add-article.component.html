@@ -1,0 +1,24 @@
+<h1 style="color: indianred;">Ajouter un article</h1>
+<form #articleValidation="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="Titre">Titre</label>
+        <input type="text" class="form-control" id="titre" name="titre" required [(ngModel)]="articleForm.titre"
+            #titre="ngModel">
+        <div [hidden]="titre.valid" class="alert alert-danger">
+            Le titre de l'article est requis
+        </div>
+        <label for="contenue">Contenue</label>
+        <textarea class="form-control" id="contenue" name="contenue" required [(ngModel)]="articleForm.contenu"
+            #contenue="ngModel"></textarea>
+        <div [hidden]="contenue.valid" class="alert alert-danger">
+            Le contenue de l'article est requis
+        </div>
+        <label for="image">Image</label>
+        <input type="text" class="form-control" id="image" name="image" required [(ngModel)]="articleForm.image"
+            #image="ngModel">
+        <div [hidden]="image.valid" class="alert alert-danger">
+            Le contenue de l'image est requis
+        </div>
+        <input class="btn btn-warning" type="submit" value="Ajouter l'article" [disabled]="!articleValidation.valid">
+    </div>
+</form>

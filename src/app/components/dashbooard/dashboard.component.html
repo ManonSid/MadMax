@@ -1,0 +1,30 @@
+<div><button class="btn btn-success" (click)="changeBtnClicked()">
+  Cliquez sur moi !!
+</button> <br>
+
+<img *ngIf="btnClicked">
+<h2>Nombre de votes = {{ nbClick }}</h2>
+<div [ngSwitch]="favoriTeam">
+  <img *ngSwitchCase="'ASM'"
+    src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Ffr%2Fa%2Fa8%2FLogo_ASM_Clermont_Auvergne_2019.svg&imgrefurl=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FFichier%3ALogo_ASM_Clermont_Auvergne_2019.svg&tbnid=WmTxRMRXLBtCbM&vet=12ahUKEwjbnv_jwbXnAhVMYBoKHUGzDaMQMygAegUIARDfAQ..i&docid=vnziK9076cpppM&w=753&h=1000&q=asm&ved=2ahUKEwjbnv_jwbXnAhVMYBoKHUGzDaMQMygAegUIARDfAQ">
+  <img *ngSwitchCase="'Brasil'"
+    src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Flove-brazil-flag-emblem-with-portuguese-text-independencia-do-brasil-vector-id1023338006&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Ffr%2Fvectoriel%2Flamour-br%25C3%25A9sil-drapeau-embl%25C3%25A8me-avec-texte-portugais-independencia-do-brasil-sur-gm1023338006-274663865&tbnid=C4voaV1LWj_llM&vet=12ahUKEwjLt7iVxLXnAhXK1uAKHVE-ClgQMygGegUIARDqAQ..i&docid=ydhKHaByI9kBbM&w=1024&h=1024&q=BRASIL&ved=2ahUKEwjLt7iVxLXnAhXK1uAKHVE-ClgQMygGegUIARDqAQ">
+  <img *ngSwitchCase="'Juventus'"
+    src="https://i.f1g.fr/media/figaro/orig/2017/01/17/XVM5dfc613a-dccc-11e6-9c25-97836c8a1e43.jpg">
+  <p *ngSwitchCaseDefault></p>
+</div>
+<h2>CLASSEMENT</h2>
+<ol>
+  <li *ngFor='let team of CLASSEMENT'>
+    {{team}}
+  </li>
+</ol>
+<div>
+  <div *ngIf="!isLoading">
+    <app-article-detail *ngFor='let article of articles'   (voteEmitter)="vote($event)" [article]="article" ></app-article-detail>
+  </div>
+</div>
+<ng-container *ngIf="isLoading">
+  <fa-icon [spin]="true" [icon]="faSpinner"></fa-icon>
+</ng-container>
+</div> 

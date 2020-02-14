@@ -1,0 +1,24 @@
+<div class="text-center">
+<h1>Ajouter un article</h1>
+<a routerLink='/admin/article/ajout'> <button class="btn btn-danger"> Créer un article</button></a>
+</div>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col"> Id </th>
+        <th scope="col"> Titre </th>
+        <th scope="col"> Contenue </th>
+        <th scope="col"> Image </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles">
+        <th>{{article.id}}</th>
+        <td>{{article.titre}}</td>
+        <td>{{article.contenu}}</td>
+        <td><img src="{{article.image}}"></td>
+        <td><a [routerLink]="['/admin/article/edit',article.id]"><fa-icon [icon]="faEdit"></fa-icon></a>
+            <a (click)="delateArticle(article)"><fa-icon style="color:green; cursor:pointer;" [icon]="faTrash"></fa-icon></a></td>
+      </tr>
+    </tbody>
+</table>

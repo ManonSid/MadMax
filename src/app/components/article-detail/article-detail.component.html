@@ -1,0 +1,6 @@
+<div class="border-1 myArticles">
+    <br>
+    <a [routerLink]="['/article', article.id]"><h1>{{ article.titre }} </h1></a>
+    <h2>Cet article à été publié le : Jour : {{ todayDate| date:'dd-MM-yyyy'}}
+    </h2>
+</div>

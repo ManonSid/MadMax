@@ -1,0 +1,15 @@
+
+<div style="background-color: paleturquoise;">
+<nav [style.background-color] = "bgColor" class="navbar navbar-expand-lg navbar-light">
+  <h1 routerLink="/home" class="text-danger">LA MONTAGNE</h1>
+  <a class="nav-item nav-link" (click)="logEvent('A la une')" routerLink="/A-la-une">A la une</a>
+  <a class="nav-item nav-link" (click)="logEvent('Vie locale')" routerLink="/Vie-locale">Vie locale</a>
+  <a class="nav-item nav-link" (click)="logEvent('Sports')" routerLink="/Sport">Sport</a>
+  <a class="nav-item nav-link" (click)="logEvent('Loisirs')" routerLink="/Loisirs">Loisirs</a>
+  <a class="nav-item nav-link" (click)="logEvent('Admin')" routerLink="/admin">Admin</a>
+ <!--<i class="fas fa-search"> </i>
+  <i class="far fa-user"> </i>
+  <i class="fas fa-bars"> </i>
+  {{message}}-->
+</nav>
+</div>
